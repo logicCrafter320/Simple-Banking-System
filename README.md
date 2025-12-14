@@ -12,7 +12,7 @@ Banking transactions
 Loan processing
 
 The project is implemented using Object-Oriented Programming (OOP) principles and file handling, without using a database, making it suitable for academic learning and demonstrations.
-<p align="center"> <img src="https://img.icons8.com/color/96/bank.png" alt="Bank" /> <img src="https://img.icons8.com/color/96/money-transfer.png" alt="Transaction" /> <img src="https://img.icons8.com/color/96/loan.png" alt="Loan" /> <img src="https://img.icons8.com/color/96/user-group-man-man.png" alt="Customers" /> <img src="https://img.icons8.com/color/96/security-checked.png" alt="Security" /> </p> <p align="center"> <img src="https://img.icons8.com/color/96/bank.png" width="64"/> <b>Customer Management • Transactions • Loans • Security • File-Based Storage</b> </p>
+<p align="center"> <img src="https://img.icons8.com/color/96/bank.png" alt="Bank" /> <img src="https://img.icons8.com/color/96/money-transfer.png" alt="Transaction" /> <img src="https://img.icons8.com/color/96/loan.png" alt="Loan" /> <img src="https://img.icons8.com/color/96/user-group-man-man.png" alt="Customers" /> <img src="https://img.icons8.com/color/96/security-checked.png" alt="Security" /> </p> <p align="center"> <b>Customer Management • Transactions • Loans • Security • File-Based Storage</b> </p>
 
 🧠 How the System Works (Visual Flow)
 graph TD
