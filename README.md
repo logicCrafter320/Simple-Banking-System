@@ -150,3 +150,4 @@ Java Mini Projects
 OOP Lab Submissions
 
 File Handling Practice
+<img src="https://img.icons8.com/color/96/bank.png" width="64"/>
