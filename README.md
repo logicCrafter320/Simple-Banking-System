@@ -1,272 +1,115 @@
-🏦 Simple Banking System (Java Console Application)
-<p align="center">
-  <img src="https://img.shields.io/badge/Language-Java-orange?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Type-Console%20Application-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Data%20Storage-File%20Handling-green?style=for-the-badge"/>
-</p>
+🏦 Simple Banking System
+Java Console Application (OOP + File Handling)
+<p align="center"> <img src="https://img.shields.io/badge/Language-Java-orange?style=for-the-badge"/> <img src="https://img.shields.io/badge/Architecture-OOP-blue?style=for-the-badge"/> <img src="https://img.shields.io/badge/Storage-Text%20Files-green?style=for-the-badge"/> </p>
 📌 Project Overview
 
-The Simple Banking System is a Java-based console application that simulates core banking operations such as customer management, account transactions, and loan handling.
-This project is developed using Object-Oriented Programming (OOP) concepts and file handling, without using a database, making it suitable for academic learning and demonstrations.
+The Simple Banking System is a Java-based console application that simulates real-world banking operations such as customer management, account transactions, and loan handling.
 
-The system supports two roles:
+It is developed using Object-Oriented Programming (OOP) concepts and file handling, without using a database — making it ideal for academic learning and demonstrations.
+
+🧠 How the System Works (Visual Flow)
+<p align="center"> <img src="https://raw.githubusercontent.com/your-username/your-repo/main/assets/system-flow.png" width="600"/> </p>
+
+Flow Explanation:
+
+User selects role
+
+Login validation
+
+Role-based operations
+
+Data stored in .txt files
+
+👥 User Roles
+<p align="center"> <img src="https://raw.githubusercontent.com/your-username/your-repo/main/assets/roles.png" width="500"/> </p>
+👤 Customer
+
+Deposit money
+
+Withdraw money
+
+Check balance
+
+Transfer funds
+
+View transaction history
+
+Apply for loans
+
+🧑‍💼 Manager
+
+Create customers
+
+View all accounts
+
+Approve / reject loans
+
+Manage customer records
+
+🧩 System Architecture (High-Level)
+<p align="center"> <img src="https://raw.githubusercontent.com/your-username/your-repo/main/assets/architecture.png" width="650"/> </p>
+User
+ ↓
+Console Interface
+ ↓
+Business Logic (OOP Classes)
+ ↓
+File Handling (.txt)
+
+📐 Class Diagram (OOP Design)
+<p align="center"> <img src="https://raw.githubusercontent.com/your-username/your-repo/main/assets/class-diagram.png" width="700"/> </p>
+
+Main Classes:
 
 Customer
 
 Manager
 
-Each role has its own set of functionalities and access controls.
+Account
 
-🎯 Objectives of the Project
+Transaction
 
-To understand OOP concepts like classes, objects, encapsulation, and modular design
+Loan
 
-To implement file-based data storage using .txt files
+DataManagement
 
-To simulate real-world banking workflows
-
-To build a menu-driven application using Java
-
-To handle authentication, transactions, and loan processing
-
-🧠 Technologies Used
-
-Language: Java
-
-Concepts:
-
-Object-Oriented Programming (OOP)
-
-File Handling (BufferedReader, BufferedWriter)
-
-Exception Handling
-
-Menu-driven Console UI
-
-Data Storage: Text files (.txt)
-
-📁 Project Structure
+🛠️ Technologies Used
+<p align="center"> <img src="https://skillicons.dev/icons?i=java,github" /> </p>
+Technology	Purpose
+Java	Core programming
+OOP	System design
+File Handling	Data storage
+Console I/O	User interaction
+📂 Project Structure
+<p align="center"> <img src="https://raw.githubusercontent.com/your-username/your-repo/main/assets/folder-structure.png" width="400"/> </p>
 Simple-Banking-System/
 │
-├── ProjectMain.java        # Main entry point (menu & navigation)
-├── DataManagement.java    # Core logic and business operations
-├── user.java              # Customer model
-├── manager.java           # Manager model
-├── loan.java              # Loan model
+├── src/
+│   ├── ProjectMain.java
+│   ├── DataManagement.java
+│   ├── Customer.java
+│   ├── Manager.java
+│   ├── Account.java
 │
-├── user.txt               # Stores customer data
-├── mgr.txt                # Stores manager data
-├── loan.txt               # Stores loan data
-│
-└── README.md              # Project documentation
-
-👥 User Roles & Functionalities
-👤 Customer Functions
-
-After logging in, a customer can:
-
-Check Account Balance
-
-Deposit Money
-
-Withdraw Money
-
-Apply for a Loan
-
-Pay Loan Amount
-
-Change Password
-
-Logout
-
-All customer data is stored persistently in user.txt.
-
-👨‍💼 Manager Functions
-
-After logging in, a manager can:
-
-View All Customers
-
-Deactivate Customer Account
-
-Deactivate Manager Account
-
-Logout
-
-Manager credentials are stored in mgr.txt.
-
-🔐 Authentication System
-
-Customers and managers must sign up before logging in
-
-Login credentials are verified from text files
-
-Session control is handled using boolean flags:
-
-isUserLoggedIn
-
-isManagerLoggedIn
-
-💾 Data Storage Format
-📄 user.txt
-FirstName|LastName|AccountNo|Balance|UserID|Password
-
-📄 mgr.txt
-FirstName|LastName|ManagerID|Password
-
-📄 loan.txt
-UserID|Mobile|Address|RequestedAmount|Tenure|Interest|DisposedAmount|PendingAmount|Status|SNo|ApplicationNo
-
-Loan Status Values:
-
--1 → Loan Requested
-
--2 → Loan Approved (future scope)
-
-1,2,3... → Installment payments
-
-💳 Banking Operations Explained
-✔ Deposit
-
-User enters an amount
-
-Balance is updated in user.txt
-
-File is rewritten with updated balance
-
-✔ Withdraw
-
-Checks if sufficient balance exists
-
-Deducts amount if valid
-
-Prevents overdraft
-
-✔ Balance Check
-
-Reads user balance from file
-
-Displays current balance
-
-🏦 Loan System Workflow
-📌 Apply Loan
-
-Customer provides mobile, address, amount, tenure, and interest
-
-Unique application number is auto-generated (e.g., AP001)
-
-Loan request is saved in loan.txt
-
-💸 Pay Loan
-
-Customer pays partial or full loan amount
-
-Pending amount is recalculated
-
-System prevents overpayment
-
-🧱 Class Responsibilities
-ProjectMain.java
-
-Entry point of the application
-
-Displays menus
-
-Routes user actions to DataManagement
-
-DataManagement.java
-
-Core logic of the system
-
-Handles:
-
-Login & signup
-
-File reading/writing
-
-Transactions
-
-Loan processing
-
-Account deletion
-
-user.java
-
-Represents customer details
-
-Stores account-related information
-
-manager.java
-
-Represents manager credentials
-
-loan.java
-
-Encapsulates loan data
-
-Used for structured loan record handling
-
-▶️ How to Run the Project
-1️⃣ Clone the Repository
-git clone https://github.com/logicCrafter320/Simple-Banking-System.git
-
-2️⃣ Compile the Program
-javac BProj/*.java
-
-3️⃣ Run the Application
-java BProj.ProjectMain
-
-✅ Key Highlights
-
-No database required
-
-Clean separation of roles
-
-Persistent data storage
-
-Menu-driven and user-friendly
-
-Real-world banking logic simulation
+├── user.txt
+├── transaction.txt
+├── loan.txt
+└── README.md
 
 🚀 Future Enhancements
+<p align="center"> <img src="https://raw.githubusercontent.com/your-username/your-repo/main/assets/future.png" width="450"/> </p>
 
-GUI using JavaFX or Swing
+GUI using JavaFX / Swing
 
-Database integration (MySQL / SQLite)
-
-Transaction history logs
-
-Loan approval by manager
-
-Interest calculation automation
+Database integration (MySQL)
 
 Password encryption
 
-📚 Academic Relevance
+Loan interest analytics
 
-This project is ideal for:
+📄 Academic Use
+<p align="center"> <img src="https://raw.githubusercontent.com/your-username/your-repo/main/assets/education.png" width="350"/> </p>
 
-Java Mini Projects
-
-OOP Demonstrations
-
-File Handling Assignments
-
-Banking System Case Studies
-
-🙌 Final Note
-
-This project reflects practical understanding, not just theory.
-You’ve implemented authentication, transactions, loan handling, and role-based access, which is more than enough for a strong academic submission.
-
-If you want, I can also help you with:
-
-Poster content
-
-Viva explanation
-
-Architecture diagram
-
-Class diagram
-
-CO-wise mapping
+✔ Java Mini Project
+✔ OOP Lab Submission
+✔ File Handling Practice
