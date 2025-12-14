@@ -1,4 +1,9 @@
 🏦 Simple Banking System (Java Console Application)
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-Java-orange?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Type-Console%20Application-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Data%20Storage-File%20Handling-green?style=for-the-badge"/>
+</p>
 📌 Project Overview
 
 The Simple Banking System is a Java-based console application that simulates core banking operations such as customer management, account transactions, and loan handling.
