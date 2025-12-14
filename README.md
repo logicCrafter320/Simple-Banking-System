@@ -71,16 +71,15 @@ Approve or reject loan requests
 Manage customer records
 
 ## 🏗 Architecture Overview
-This diagram shows how Customer and Manager interact with the system.
-
 <p align="center">
-  <img src="PLANTUML_OR_IMAGE_URL" width="700"/>
+  <img src="images/architecture.png" width="700">
 </p>
 
 ## 📊 Class Diagram
 <p align="center">
-  <img src="CLASS_DIAGRAM_URL" width="800"/>
+  <img src="images/class-diagram.png" width="800">
 </p>
+
 
 🛠️ Technologies Used
 Technology	Purpose
