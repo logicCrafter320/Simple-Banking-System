@@ -3,25 +3,57 @@ Java Console Application (OOP + File Handling)
 <p align="center"> <img src="https://img.shields.io/badge/Language-Java-orange?style=for-the-badge"/> <img src="https://img.shields.io/badge/Architecture-OOP-blue?style=for-the-badge"/> <img src="https://img.shields.io/badge/Storage-Text%20Files-green?style=for-the-badge"/> </p>
 📌 Project Overview
 
-The Simple Banking System is a Java-based console application that simulates customer management, banking transactions, and loan processing using OOP concepts and file handling.
+The Simple Banking System is a Java-based console application that simulates real-world banking operations such as:
+
+Customer management
+
+Banking transactions
+
+Loan processing
+
+The project is implemented using Object-Oriented Programming (OOP) principles and file handling, without using a database, making it suitable for academic learning and demonstrations.
 
 🧠 How the System Works (Visual Flow)
-<p align="center"> <img src="https://mermaid.ink/img/pako:eNpNkM1qwzAQhF8l8nQFvZb2UtiW2iJFKrQUmJg2C5FQyZJmFJYx7nG7tZ0zJt0eZyG9kC3kZ2c5C1YwPZJ1dM2iSxXr4h2QfQ0w9XcVvZQzq3K7Yqz8n2l7Zzv0LJpV2k0yZy0u0F4cQp0R0G7B4A3o8Jw" width="600"/> </p>
+graph TD
+    A[User] --> B[Login]
+    B --> C{Role Check}
+    C -->|Customer| D[Customer Operations]
+    C -->|Manager| E[Manager Operations]
+    D --> F[Text Files]
+    E --> F[Text Files]
 
-Flow:
-User → Login → Role Check → Banking Operations → File Storage
 
-👥 User Roles (Clear Visual)
-<p align="center"> <img src="https://mermaid.ink/img/pako:eNpNkMEOwjAMRX9l5LkCqW2hQ8xKkE1Y1BIkqJp0g0W5pFh3r3YQ8sY2k7z9wA8c0U8m9QbZ0xG6Jm0bKxZ3U8F4p9LQqM7XkM2M5p5KZk5cG4yYQ0B8" width="500"/> </p>
+Flow Explanation:
+
+User logs in
+
+Role is verified
+
+Operations are executed
+
+Data is stored in .txt files
+
+👥 User Roles
+graph LR
+    Customer --> Deposit
+    Customer --> Withdraw
+    Customer --> Transfer
+    Customer --> CheckBalance
+    Customer --> ViewHistory
+
+    Manager --> CreateCustomer
+    Manager --> ApproveLoan
+    Manager --> ViewAccounts
+
 👤 Customer
 
 Deposit money
 
 Withdraw money
 
-Check balance
-
 Transfer funds
+
+Check balance
 
 View transaction history
 
@@ -33,65 +65,87 @@ Create customers
 
 View all accounts
 
-Approve / reject loans
+Approve or reject loan requests
 
-Manage records
+Manage customer records
 
 🧩 High-Level Architecture
-<p align="center"> <img src="https://mermaid.ink/img/pako:eNpNkMEKwjAMRX9l5LkCqZpJQ5xKkM1Y1BIkqJp0g0W5pFh3r3YQ8sY2k7z9wA8c0U8m9QbZ0xG6Jm0bKxZ3U8F4p9LQqM7XkM2M5p5KZk5cG4yYQ0B8" width="650"/> </p>
-User
- ↓
-Console Interface
- ↓
-Business Logic (OOP Classes)
- ↓
-Text Files (.txt)
+graph TD
+    UI[Console Interface] --> BL[Business Logic]
+    BL --> DM[Data Management]
+    DM --> FS[Text File Storage]
 
-📐 Class Diagram (OOP Design)
-<p align="center"> <img src="https://mermaid.ink/img/pako:eNpNkMEKwjAMRX9l5LkCqYpJQ5xKkE1Y1BIkqJp0g0W5pFh3r3YQ8sY2k7z9wA8c0U8m9QbZ0xG6Jm0bKxZ3U8F4p9LQqM7XkM2M5p5KZk5cG4yYQ0B8" width="700"/> </p>
+📐 Class Diagram
+classDiagram
+    class Customer {
+        +String id
+        +String name
+        +login()
+    }
 
-Main Classes
+    class Manager {
+        +String id
+        +login()
+        +approveLoan()
+    }
 
-Customer
+    class Account {
+        +String accountNo
+        +double balance
+        +deposit()
+        +withdraw()
+    }
 
-Manager
+    class Transaction {
+        +amount
+        +type
+        +date
+    }
 
-Account
+    Customer --> Account
+    Account --> Transaction
+    Manager --> Customer
 
-Transaction
-
-Loan
-
-DataManagement
-
-🛠️ Technologies Used (Icons – WORKING ✅)
-<p align="center"> <img src="https://skillicons.dev/icons?i=java,github,vscode" /> </p>
+🛠️ Technologies Used
 Technology	Purpose
-Java	Core logic
-OOP	Design
-File Handling	Data storage
-Console	User interaction
-📂 Project Structure (Visual + Code)
-<p align="center"> <img src="https://img.icons8.com/color/96/folder-tree.png"/> </p>
+Java	Core programming
+OOP	System design
+File Handling	Data persistence
+Console I/O	User interaction
+📂 Project Structure
 Simple-Banking-System/
+│
 ├── src/
 │   ├── ProjectMain.java
 │   ├── DataManagement.java
 │   ├── Customer.java
 │   ├── Manager.java
-│   └── Account.java
+│   ├── Account.java
+│   └── Transaction.java
+│
 ├── user.txt
 ├── transaction.txt
 ├── loan.txt
 └── README.md
 
 🚀 Future Enhancements
-<p align="center"> <img src="https://img.icons8.com/color/96/rocket.png"/> </p>
 
-GUI (JavaFX / Swing)
+GUI using JavaFX or Swing
 
-Database (MySQL)
+Database integration (MySQL)
 
 Password encryption
 
-Interest calculation reports
+Interest calculation for loans
+
+Report generation
+
+🎓 Academic Use
+
+This project is suitable for:
+
+Java Mini Projects
+
+OOP Lab Submissions
+
+File Handling Practice
