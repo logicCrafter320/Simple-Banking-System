@@ -70,42 +70,17 @@ Approve or reject loan requests
 
 Manage customer records
 
-🧩 High-Level Architecture
-graph TD
-    UI[Console Interface] --> BL[Business Logic]
-    BL --> DM[Data Management]
-    DM --> FS[Text File Storage]
+## 🏗 Architecture Overview
+This diagram shows how Customer and Manager interact with the system.
 
-📐 Class Diagram
-classDiagram
-    class Customer {
-        +String id
-        +String name
-        +login()
-    }
+<p align="center">
+  <img src="PLANTUML_OR_IMAGE_URL" width="700"/>
+</p>
 
-    class Manager {
-        +String id
-        +login()
-        +approveLoan()
-    }
-
-    class Account {
-        +String accountNo
-        +double balance
-        +deposit()
-        +withdraw()
-    }
-
-    class Transaction {
-        +amount
-        +type
-        +date
-    }
-
-    Customer --> Account
-    Account --> Transaction
-    Manager --> Customer
+## 📊 Class Diagram
+<p align="center">
+  <img src="CLASS_DIAGRAM_URL" width="800"/>
+</p>
 
 🛠️ Technologies Used
 Technology	Purpose
