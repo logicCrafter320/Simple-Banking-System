@@ -70,23 +70,14 @@ Approve or reject loan requests
 
 Manage customer records
 
-## 🏗 Architecture Overview
-<p align="center">
-  <img src="images/architecture.png" width="700">
-</p>
-
-## 📊 Class Diagram
-<p align="center">
-  <img src="images/class-diagram.png" width="800">
-</p>
-
-
 🛠️ Technologies Used
 Technology	Purpose
-Java	Core programming
-OOP	System design
-File Handling	Data persistence
-Console I/O	User interaction
+. Java
+. Core programming
+. OOP	System design
+. File Handling	Data persistence
+. Console I/O	User interactio
+n
 📂 Project Structure
 Simple-Banking-System/
 │
